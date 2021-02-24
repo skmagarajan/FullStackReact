@@ -1,0 +1,26 @@
+{
+  "name": "fullstackreact",
+  "version": "1.0.0",
+  "description": "Developing an application for feedback collection and evaluate those feedbacks - React, Express/Node and MongoDB with Google OAuth authentication",
+  "main": "index.js",
+  "engines": {
+			"node" : "14.15.5",
+			"npm": "7.5.6"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skmagarajan/FullStackReact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skmagarajan/FullStackReact/issues"
+  },
+  "homepage": "https://github.com/skmagarajan/FullStackReact#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
