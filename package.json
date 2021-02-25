@@ -4,8 +4,8 @@
   "description": "Developing an application for feedback collection and evaluate those feedbacks - React, Express/Node and MongoDB with Google OAuth authentication",
   "main": "index.js",
   "engines": {
-			"node" : "14.15.5",
-			"npm": "7.5.6"
+    "node": "14.15.5",
+    "npm": "7.5.6"
   },
   "scripts": {
     "start": "node index.js"
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/skmagarajan/FullStackReact#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
