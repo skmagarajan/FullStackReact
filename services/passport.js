@@ -21,21 +21,15 @@ passport.use(
 			clientSecret: keys.googleClientSecret,
 			callbackURL: '/auth/google/callback'
 	}, 
-	(accessToken,refreshToken,profile,done) => {
-			console.log(accessToken);	
-			console.log(profile);
-			
-			User.findOne({googleID:profile.id})
-			.then( (present_user) => {
-				if(present_user){
-					console.log("Already Joined");
-					done(null,present_user);
-				}
-				else{
-					console.log("New User");
-					new User({googleID:profile.id}).save().then(user => done(null,user));
-				}
-			});
-			
+	async (accessToken,refreshToken,profile,done) => {
+
+		const existingUser = await User.findOne({googleID:profile.id});
+
+		if(existingUser){
+			return done(null, existingUser);
+		}
+
+		const user = await new User({googleID:profile.id}).save();
+		done(null, user);	
 	})
 );
