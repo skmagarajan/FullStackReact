@@ -16,6 +16,7 @@ class Header extends Component {
 					<li key="1" ><Payments /></li>,
 					<li key="2" ><a href="api/logout">Logout</a></li>
 				];
+				// return <li><a href='auth/google'>Login Here</a></li>;
 		}
 	}
 	render() {
